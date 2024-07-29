@@ -17,10 +17,47 @@
   }
 }
 
-.btn--it {
-  background-color: $it;
+
+@mixin btn-hover($color) {
+  background-color: $color;
   &:hover {
-    background-color: darken($it, 10%);
+    background-color: darken($color, 10%);
   }
+}
+
+.btn--google {
+  @include btn-hover($google);
+}
+
+.btn--trustpilot {
+  @include btn-hover($trustpilot);
+}
+
+.btn--software {
+  @include btn-hover($software);
+}
+
+.btn--it {
+  @include btn-hover($it);
+}
+
+.btn--digital {
+  @include btn-hover($digital);
+}
+
+.btn--telecoms {
+  @include btn-hover($telecoms);
+}
+
+.btn--web {
+  @include btn-hover($web);
+}
+
+.btn--security {
+  @include btn-hover($security);
+}
+
+.btn-developer {
+  @include btn-hover($developer);
 }
 

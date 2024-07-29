@@ -772,6 +772,55 @@ button {
     display: block;
   }
 }
+.banner {
+  height: 550px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  overflow: hidden;
+}
+.banner__img {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+.banner__img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.banner__content {
+  padding: 3.75rem;
+  z-index: 2;
+}
+.banner h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin: 0 0 1.25rem;
+  font-weight: 600;
+  color: inherit;
+}
+.banner p {
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+.banner .btn {
+  line-height: 50px;
+  padding: 5px 20px;
+  font-size: 1.25rem;
+}
+.banner .btn i {
+  width: 20px;
+}
+
 .btn {
   display: inline-block;
   text-transform: uppercase;
@@ -790,11 +839,67 @@ button {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
+.btn--google {
+  background-color: #4387f6;
+}
+.btn--google:hover {
+  background-color: #1268f4;
+}
+
+.btn--trustpilot {
+  background-color: #00b67b;
+}
+.btn--trustpilot:hover {
+  background-color: #008359;
+}
+
+.btn--software {
+  background-color: #67809F;
+}
+.btn--software:hover {
+  background-color: #526781;
+}
+
 .btn--it {
   background-color: #4183D7;
 }
 .btn--it:hover {
   background-color: #286abd;
+}
+
+.btn--digital {
+  background-color: #2ecc71;
+}
+.btn--digital:hover {
+  background-color: #25a25a;
+}
+
+.btn--telecoms {
+  background-color: #d64541;
+}
+.btn--telecoms:hover {
+  background-color: #bc2c28;
+}
+
+.btn--web {
+  background-color: #926fb1;
+}
+.btn--web:hover {
+  background-color: #79539a;
+}
+
+.btn--security {
+  background-color: #f62459;
+}
+.btn--security:hover {
+  background-color: #de093f;
+}
+
+.btn-developer {
+  background-color: #ce4125;
+}
+.btn-developer:hover {
+  background-color: #a3331d;
 }
 
 /*# sourceMappingURL=style.css.map */
