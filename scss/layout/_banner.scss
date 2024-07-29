@@ -10,6 +10,10 @@
   background-color: #000;
   overflow: hidden;
 
+  @media (min-width: $bp-md) {
+    text-align: left;
+  }
+
   &__img {
     position: absolute;
     z-index: 1;
@@ -35,6 +39,10 @@
     margin: 0 0 1.25rem;
     font-weight: 600;
     color: inherit;
+    @media (min-width: $bp-md) {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
   }
 
   p {
@@ -42,6 +50,10 @@
     font-size: 1.25rem;
     line-height: 1.75rem;
     font-weight: 600;
+    @media (min-width: $bp-md) {
+      font-size: 1.625rem;
+      line-height: 2.5rem;
+    }
   }
 
   .btn {

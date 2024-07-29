@@ -783,6 +783,11 @@ button {
   background-color: #000;
   overflow: hidden;
 }
+@media (min-width: 992px) {
+  .banner {
+    text-align: left;
+  }
+}
 .banner__img {
   position: absolute;
   z-index: 1;
@@ -806,11 +811,23 @@ button {
   font-weight: 600;
   color: inherit;
 }
+@media (min-width: 992px) {
+  .banner h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+}
 .banner p {
   margin-bottom: 2rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
+}
+@media (min-width: 992px) {
+  .banner p {
+    font-size: 1.625rem;
+    line-height: 2.5rem;
+  }
 }
 .banner .btn {
   line-height: 50px;
