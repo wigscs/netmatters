@@ -1,0 +1,160 @@
+// Footer
+.footer-nav {
+  color: #fff;
+  background-color: #323544;
+  padding-top: 27px;
+
+  img {
+    max-width: 100%;
+    max-height: 65px;
+  }
+
+  h1, h2, h3, h4 {
+    color: #fff;
+  }
+
+  h4 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 24px;
+    margin-bottom: 26px;
+  }
+
+  ul {
+    list-style: none;
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    padding: 0;
+    margin: 0;
+    a {
+      &:hover {
+        text-decoration: underline;
+      } 
+    }
+    &:last-child {
+      padding-bottom: 30px;
+    }
+  }
+
+  a {
+    color: #fff;
+  }
+}
+
+.footer-links {
+  h4 {
+    margin-top: 0;
+  }
+}
+
+.social-logos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  max-width: 320px;
+  min-width: 215px;
+  
+  .btn-primary {
+    font-size: 26px;
+    line-height: 26px;
+    padding: 14px 22px;
+    margin: 0 10px 10px 0;
+    border-radius: 0;
+  }
+
+  a {
+    text-align: center;
+    background-color: $footer-dark;
+  }
+  
+  .facebook:hover {
+    background-color: $facebook;
+  }
+  
+  .linkedin:hover {
+    background-color: $linkedin;
+  }
+  
+  .twitter:hover {
+    background-color: $twitter;
+  }
+  
+  .instagram:hover {
+    background-color: $instagram;
+  }
+
+  @media (max-width: 480px) {
+    a {
+      width: 35%;
+    }
+  }
+}
+
+.footer-bottom {
+  background-color: $footer-dark;
+  color: #fff;
+  padding-top: 10px;
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    font-size: .8125rem;
+    margin: 0;
+    padding: 5px 0 10px;
+    line-height: 1.1rem;
+  }
+  a {
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    .flex {
+      flex-direction: row;
+    }
+    span {
+      margin-left: 7px;
+    }
+    span:last-child::before {
+      margin-right: 7px;
+      content: "-";
+    }
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+      width: 50%;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .footer-links {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .footer-links > div {
+    width: 25%;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .footer-nav {
+    padding-top: 47px;
+  }
+  .footer-links h4 {
+    margin-top: 0;
+  }
+  .footer-nav .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

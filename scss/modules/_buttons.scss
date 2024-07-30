@@ -40,7 +40,7 @@
 }
 
 .btn--software {
-  @include btn-hover($software);
+  @include btn-hover($software-btn);
 }
 
 .btn--it {
@@ -67,3 +67,22 @@
   @include btn-hover($developer);
 }
 
+.manage-consent {
+  border: none;
+  background-color: #75788a;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0 10px;
+  text-transform: capitalize;
+  font-weight: 600;
+  z-index: 99;
+  border-top-right-radius: 10px;
+  line-height: 22px;
+  font-size: .8rem;
+  cursor: pointer;
+  &:hover {
+    background-color: lighten(#75788a, 10%);
+  }
+}

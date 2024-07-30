@@ -9,6 +9,7 @@
     padding: 11px 31px;
     font-size: 20px;
     border-radius: 6px;
+    margin-bottom: 50px;
     i {
       margin-left: 7px;
     }
@@ -36,7 +37,6 @@
     line-height: 30px;
     &:first-of-type {
       font-weight: 600;
-      letter-spacing: 1px;
     }
   }
 
@@ -73,6 +73,11 @@
     .btn.why-choose-btn,
     .btn.btn--google {
       margin-bottom: 20px;
+    }
+  }
+  @media (min-width: $bp-md) {
+    .btn.why-choose-btn {
+      margin-top: 10px;
     }
   }
 }
