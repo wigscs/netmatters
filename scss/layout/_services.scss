@@ -1,0 +1,214 @@
+// Services
+.services {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  :not(.btn) {
+    color: $brand-light;
+    text-decoration: none;
+  }
+
+  > .container {
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 2.7rem;
+    font-weight: 400;
+    display: inline-block;
+    margin: 0;
+  }
+  
+  .view-work-top {
+    display: none;
+    font-size: 2.25rem;
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-weight: 600;
+    
+    @media (min-width: 768px) {
+      display: inline-block;
+      float: right;
+    }
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-bottom: 10px;
+    margin-bottom: 11px;
+    margin-top: 0;
+  }
+  
+  h3 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    font-weight: 400;
+  }
+
+  .service-list {
+    margin-top: 45px;
+  }
+
+  .card a {
+    display: block;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+    margin: 30px 0 0;
+    position: relative;
+    top: 0;
+    transition: .5s ease;
+    
+    i {
+      display: inline-block;
+      color: #fff;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 1.7rem;
+      margin: 0 auto 17px;
+      height: 65px;
+      width: 65px;
+      &::before {
+        position: relative;
+        top: 4px;
+      }
+    }
+    &:hover {
+      color: #fff;
+      border-color: transparent;
+      top: -10px;
+      transition: .5s ease;
+      h2, p {
+        color: inherit;
+      }
+    }
+  }
+
+  .software {
+    .btn {
+      background-color: $software-btn;
+    }
+    a:hover, i {
+      background-color: $software;
+    }
+    a:hover {
+      .btn {
+        background-color: #fff;
+        color: $software;
+      }
+      i {
+        color: $software;
+        background-color: #fff;
+      }
+    }
+  }
+  
+  // Hover state color inversion for cards
+  @mixin card-hover($color) {
+    .btn, i {
+      background-color: $color;
+    }
+    a:hover {
+      background-color: $color;
+      .btn, i {
+        color: $color;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .it {
+    @include card-hover($it);
+  }
+
+  .digital {
+    @include card-hover($digital);
+  }
+
+  .telecoms {
+    @include card-hover($telecoms);
+  }
+
+  .web {
+    @include card-hover($web);
+  }
+
+  .security {
+    @include card-hover($security);
+  }
+
+  .developer {
+    @include card-hover($developer);
+  }
+  .view-work-bottom {
+    font-size: 1.625rem;
+    font-weight: 600;
+    margin: 30px 0 15px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .view-work-bottom {
+    display: none;
+  }
+  .service-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 30px;
+  }
+  .card {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    &.telecoms,
+    &.web,
+    &.security,
+    &.developer {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    width: 33.33%;
+    a .btn {
+      margin-top: auto;
+      justify-self: flex-end;
+      align-self: stretch;
+    }
+  }
+}
+
+@media (min-width: 1260px) {
+  .card {
+    &.telecoms,
+    &.web,
+    &.security,
+    &.developer {
+      width: 25%;
+    }
+    &.digital p {
+      margin-bottom: 35px;
+    }
+  }
+}

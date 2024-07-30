@@ -333,6 +333,33 @@ button {
   border: none;
 }
 
+figure, blockquote {
+  margin: 0;
+}
+
+blockquote {
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+}
+
+figcaption {
+  font-weight: 600;
+  color: #a3a8ac;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+}
+figcaption a {
+  color: #fff;
+}
+figcaption a:hover {
+  text-decoration: underline;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -534,29 +561,6 @@ button {
   background-color: #333645;
   position: relative;
 }
-.main-navigation .main-items > li > a {
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-}
-.main-navigation .main-items > li > a::before {
-  display: none;
-  content: "";
-  position: absolute;
-  bottom: -35px;
-  transform: translateX(-50%);
-  z-index: 90;
-  width: 0;
-  height: 0;
-  border-color: blue transparent transparent;
-  border-style: solid;
-  border-width: 35px 68px 0;
-}
-@media (min-width: 1260px) {
-  .main-navigation .main-items > li > a::before {
-    border-width: 35px 83.5px 0;
-  }
-}
 .main-navigation i, .main-navigation small {
   display: block;
 }
@@ -580,11 +584,34 @@ button {
   margin: 0;
   padding: 0;
 }
-.main-navigation .main-items {
+.main-navigation__items {
   display: flex;
 }
-.main-navigation .main-items > li {
+.main-navigation__items > li {
   flex: 1;
+}
+.main-navigation__items > li > a {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+.main-navigation__items > li > a::before {
+  display: none;
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  transform: translateX(-50%);
+  z-index: 90;
+  width: 0;
+  height: 0;
+  border-color: blue transparent transparent;
+  border-style: solid;
+  border-width: 35px 68px 0;
+}
+@media (min-width: 1260px) {
+  .main-navigation__items > li > a::before {
+    border-width: 35px 83.5px 0;
+  }
 }
 .main-navigation .sub-menu-banner {
   display: none;
@@ -838,15 +865,303 @@ button {
   width: 20px;
 }
 
+.services {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.services :not(.btn) {
+  color: #333645;
+  text-decoration: none;
+}
+.services > .container {
+  margin-top: 20px;
+}
+.services h1 {
+  font-size: 2.7rem;
+  font-weight: 400;
+  display: inline-block;
+  margin: 0;
+}
+.services .view-work-top {
+  display: none;
+  font-size: 2.25rem;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .services .view-work-top {
+    display: inline-block;
+    float: right;
+  }
+}
+.services h2 {
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-bottom: 10px;
+  margin-bottom: 11px;
+  margin-top: 0;
+}
+.services h3 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+.services h3 a:hover {
+  text-decoration: underline;
+}
+.services p {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-weight: 400;
+}
+.services .service-list {
+  margin-top: 45px;
+}
+.services .card a {
+  display: block;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  margin: 30px 0 0;
+  position: relative;
+  top: 0;
+  transition: 0.5s ease;
+}
+.services .card a i {
+  display: inline-block;
+  color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 1.7rem;
+  margin: 0 auto 17px;
+  height: 65px;
+  width: 65px;
+}
+.services .card a i::before {
+  position: relative;
+  top: 4px;
+}
+.services .card a:hover {
+  color: #fff;
+  border-color: transparent;
+  top: -10px;
+  transition: 0.5s ease;
+}
+.services .card a:hover h2, .services .card a:hover p {
+  color: inherit;
+}
+.services .software .btn {
+  background-color: #f7b322;
+}
+.services .software a:hover, .services .software i {
+  background-color: #67809F;
+}
+.services .software a:hover .btn {
+  background-color: #fff;
+  color: #67809F;
+}
+.services .software a:hover i {
+  color: #67809F;
+  background-color: #fff;
+}
+.services .it .btn, .services .it i {
+  background-color: #4183D7;
+}
+.services .it a:hover {
+  background-color: #4183D7;
+}
+.services .it a:hover .btn, .services .it a:hover i {
+  color: #4183D7;
+  background-color: #fff;
+}
+.services .digital .btn, .services .digital i {
+  background-color: #2ecc71;
+}
+.services .digital a:hover {
+  background-color: #2ecc71;
+}
+.services .digital a:hover .btn, .services .digital a:hover i {
+  color: #2ecc71;
+  background-color: #fff;
+}
+.services .telecoms .btn, .services .telecoms i {
+  background-color: #d64541;
+}
+.services .telecoms a:hover {
+  background-color: #d64541;
+}
+.services .telecoms a:hover .btn, .services .telecoms a:hover i {
+  color: #d64541;
+  background-color: #fff;
+}
+.services .web .btn, .services .web i {
+  background-color: #926fb1;
+}
+.services .web a:hover {
+  background-color: #926fb1;
+}
+.services .web a:hover .btn, .services .web a:hover i {
+  color: #926fb1;
+  background-color: #fff;
+}
+.services .security .btn, .services .security i {
+  background-color: #f62459;
+}
+.services .security a:hover {
+  background-color: #f62459;
+}
+.services .security a:hover .btn, .services .security a:hover i {
+  color: #f62459;
+  background-color: #fff;
+}
+.services .developer .btn, .services .developer i {
+  background-color: #ce4125;
+}
+.services .developer a:hover {
+  background-color: #ce4125;
+}
+.services .developer a:hover .btn, .services .developer a:hover i {
+  color: #ce4125;
+  background-color: #fff;
+}
+.services .view-work-bottom {
+  font-size: 1.625rem;
+  font-weight: 600;
+  margin: 30px 0 15px;
+}
+
+@media (min-width: 768px) {
+  .view-work-bottom {
+    display: none;
+  }
+  .service-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 30px;
+  }
+  .card {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .card.telecoms, .card.web, .card.security, .card.developer {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .card {
+    width: 33.33%;
+  }
+  .card a .btn {
+    margin-top: auto;
+    justify-self: flex-end;
+    align-self: stretch;
+  }
+}
+@media (min-width: 1260px) {
+  .card.telecoms, .card.web, .card.security, .card.developer {
+    width: 25%;
+  }
+  .card.digital p {
+    margin-bottom: 35px;
+  }
+}
+.home-main {
+  color: #fff;
+  background-color: #333645;
+  padding-top: 50px;
+}
+.home-main .btn {
+  padding: 11px 31px;
+  font-size: 20px;
+  border-radius: 6px;
+}
+.home-main .btn i {
+  margin-left: 7px;
+}
+.home-main p a:hover {
+  text-decoration: underline;
+}
+.home-main h1, .home-main h2, .home-main h3, .home-main p a {
+  color: inherit;
+  font-weight: 600;
+}
+.home-main h1 {
+  margin: 0 0 40px;
+}
+.home-main h2 {
+  font-size: 2.25rem;
+  margin: 0 0 40px;
+}
+.home-main p {
+  line-height: 30px;
+}
+.home-main p:first-of-type {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.home-main figcaption {
+  margin-bottom: 50px;
+}
+@media (max-width: 626px) {
+  .home-main .btn.btn--google {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 561px) {
+  .home-main .btn.why-choose-btn {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .home-main .btn {
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .home-main .flex {
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .home-main .col {
+    width: 50%;
+    padding: 0 15px;
+  }
+  .home-main .btn.why-choose-btn,
+  .home-main .btn.btn--google {
+    margin-bottom: 20px;
+  }
+}
+
+.fa-star {
+  color: orange;
+  font-size: 50px;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+
 .btn {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
   color: #fff;
   background-color: #999aa2;
+  line-height: 35px;
   padding: 7px 17px;
   border-radius: 3px;
-  cursor: pointer;
+  font-size: 1.063rem;
 }
 .btn:hover {
   text-decoration: none;
@@ -854,6 +1169,13 @@ button {
 }
 .btn:active {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn--primary {
+  background-color: #272936;
+}
+.btn--primary:hover {
+  background-color: #121318;
 }
 
 .btn--google {
@@ -917,6 +1239,23 @@ button {
 }
 .btn-developer:hover {
   background-color: #a3331d;
+}
+
+.logo-list {
+  padding: 50px 0;
+  display: flex;
+  overflow-x: clip;
+  gap: 50px;
+  align-items: center;
+}
+.logo-list img {
+  max-height: 70px;
+  max-width: 200px;
+  padding: 0 20px;
+  filter: grayscale(1);
+}
+.logo-list img:hover {
+  filter: initial;
 }
 
 /*# sourceMappingURL=style.css.map */

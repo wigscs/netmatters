@@ -24,6 +24,33 @@ button {
   border: none;
 }
 
+figure, blockquote {
+  margin: 0;
+}
+
+blockquote {
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.875rem;
+  margin-bottom: 25px
+}
+
+figcaption {
+  font-weight: 600;
+  color: #a3a8ac;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  a {
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;

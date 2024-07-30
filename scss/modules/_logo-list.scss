@@ -1,0 +1,16 @@
+.logo-list {
+  padding: 50px 0;
+  display: flex;
+  overflow-x: clip;
+  gap: 50px;
+  align-items: center;
+  img {
+    max-height: 70px;
+    max-width: 200px;
+    padding: 0 20px;
+    filter: grayscale(1);
+    &:hover {
+      filter: initial;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+// Main Section
+
+.home-main {
+  color: #fff;
+  background-color: $brand-light;
+  padding-top: 50px;
+
+  .btn {
+    padding: 11px 31px;
+    font-size: 20px;
+    border-radius: 6px;
+    i {
+      margin-left: 7px;
+    }
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+
+  h1, h2, h3, p a {
+    color: inherit;
+    font-weight: 600;
+  }
+
+  h1 {
+    margin: 0 0 40px;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+    margin: 0 0 40px;
+  }
+
+  p {
+    line-height: 30px;
+    &:first-of-type {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
+
+  figcaption {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 626px) {
+    .btn.btn--google {
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 561px) {
+    .btn.why-choose-btn {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: $bp-md) {
+    .btn {
+      margin-bottom: 50px;
+    }
+  }
+  @media (min-width: $bp-md) {
+    .flex {
+      display: flex;
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+    .col {
+      width: 50%;
+      padding: 0 15px;
+    }
+    .btn.why-choose-btn,
+    .btn.btn--google {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.fa-star {
+  color: orange;
+  font-size: 50px;
+  margin-bottom: 25px;
+  display: inline-block;
+}
