@@ -9,6 +9,7 @@
   padding: 7px 17px;
   border-radius: 3px;
   font-size: 1.063rem;
+  text-wrap: nowrap;
   
   &:hover {
     text-decoration: none;
@@ -20,10 +21,10 @@
 }
 
 
-@mixin btn-hover($color) {
+@mixin btn-hover($color, $percentage: 10%) {
   background-color: $color;
   &:hover {
-    background-color: darken($color, 10%);
+    background-color: darken($color, $percentage);
   }
 }
 
@@ -32,11 +33,17 @@
 }
 
 .btn--google {
-  @include btn-hover($google);
+  background-color: $google;
+  &:hover {
+    background-color: #166af4;
+  }
 }
 
 .btn--trustpilot {
-  @include btn-hover($trustpilot);
+  background-color: $trustpilot;
+  &:hover {
+    background-color: #009b69;
+  }
 }
 
 .btn--software {

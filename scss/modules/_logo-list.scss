@@ -6,18 +6,21 @@
   align-items: center;
   img {
     max-height: 70px;
-    max-width: 200px;
     padding: 0 20px;
     filter: grayscale(1);
     &:hover {
       filter: initial;
     }
   }
+  .logo-container:hover img {
+    filter: initial;
+  }
 }
 
 .logo-list--clients {
   img {
     padding: 0;
+    max-width: 200px;
   }
   .logo-container {
     display: flex;
@@ -36,7 +39,7 @@
   .details {
     display: none;
     position: absolute;
-    bottom: 150%;
+    bottom: 155%;
     max-width: 280px;
     padding: 20px;
     background-color: $brand-light;

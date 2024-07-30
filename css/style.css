@@ -872,9 +872,6 @@ figcaption a:hover {
   color: #333645;
   text-decoration: none;
 }
-.services > .container {
-  margin-top: 20px;
-}
 .services h1 {
   font-size: 2.7rem;
   font-weight: 400;
@@ -916,9 +913,6 @@ figcaption a:hover {
   margin-top: 0;
   margin-bottom: 13px;
   font-weight: 400;
-}
-.services .service-list {
-  margin-top: 45px;
 }
 .services .card a {
   display: block;
@@ -1165,9 +1159,10 @@ figcaption a:hover {
 }
 .articles h1 {
   color: #333645;
-  margin-top: 50px;
   font-weight: 600;
   display: inline-block;
+  margin-top: 50px;
+  margin-bottom: 0;
 }
 .articles .img-container img {
   width: 100%;
@@ -1419,7 +1414,7 @@ figcaption a:hover {
     flex-direction: row;
   }
   .footer-bottom span {
-    margin-left: 7px;
+    margin-left: 5px;
   }
   .footer-bottom span:last-child::before {
     margin-right: 7px;
@@ -1466,6 +1461,7 @@ figcaption a:hover {
   padding: 7px 17px;
   border-radius: 3px;
   font-size: 1.063rem;
+  text-wrap: nowrap;
 }
 .btn:hover {
   text-decoration: none;
@@ -1486,14 +1482,14 @@ figcaption a:hover {
   background-color: #4387f6;
 }
 .btn--google:hover {
-  background-color: #1268f4;
+  background-color: #166af4;
 }
 
 .btn--trustpilot {
   background-color: #00b67b;
 }
 .btn--trustpilot:hover {
-  background-color: #008359;
+  background-color: #009b69;
 }
 
 .btn--software {
@@ -1574,16 +1570,19 @@ figcaption a:hover {
 }
 .logo-list img {
   max-height: 70px;
-  max-width: 200px;
   padding: 0 20px;
   filter: grayscale(1);
 }
 .logo-list img:hover {
   filter: initial;
 }
+.logo-list .logo-container:hover img {
+  filter: initial;
+}
 
 .logo-list--clients img {
   padding: 0;
+  max-width: 200px;
 }
 .logo-list--clients .logo-container {
   display: flex;
@@ -1599,7 +1598,7 @@ figcaption a:hover {
 .logo-list--clients .details {
   display: none;
   position: absolute;
-  bottom: 150%;
+  bottom: 155%;
   max-width: 280px;
   padding: 20px;
   background-color: #333645;
