@@ -798,8 +798,8 @@ figcaption a:hover {
     display: block;
   }
 }
-.banner {
-  height: 550px;
+.banner .slide-item {
+  min-height: 550px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -810,7 +810,7 @@ figcaption a:hover {
   overflow: hidden;
 }
 @media (min-width: 992px) {
-  .banner {
+  .banner .slide-item {
     text-align: left;
   }
 }
@@ -821,13 +821,31 @@ figcaption a:hover {
   width: 100%;
   opacity: 0.5;
 }
+@media (min-width: 992px) {
+  .banner__img {
+    opacity: 1;
+  }
+}
 .banner__img img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
+@media (min-width: 992px) {
+  .banner__img::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(270deg, transparent 25%, #000);
+    z-index: 3;
+  }
+}
 .banner__content {
-  padding: 3.75rem;
+  padding: 3.75rem 0;
+  position: relative;
   z-index: 2;
 }
 .banner h1 {
@@ -844,7 +862,7 @@ figcaption a:hover {
   }
 }
 .banner p {
-  margin-bottom: 2rem;
+  margin: 0 0 0.375rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
@@ -859,9 +877,58 @@ figcaption a:hover {
   line-height: 50px;
   padding: 5px 20px;
   font-size: 1.25rem;
+  margin-top: 1.938rem;
+  margin-bottom: 1.125rem;
 }
 .banner .btn i {
+  margin-left: 7px;
+  margin-right: -4px;
   width: 20px;
+}
+.banner .btn--web {
+  border: 1px solid #926fb1;
+}
+.banner .btn--web:hover {
+  background-color: #7e57a0;
+  border-color: #735093;
+}
+.banner .slick-dots {
+  bottom: 44px;
+}
+.banner .slick-dots li {
+  margin: 0;
+  height: auto;
+  width: auto;
+}
+.banner .slick-dots li:hover button {
+  background-color: #869791;
+}
+.banner .slick-dots li button {
+  background-color: hsla(0, 0%, 100%, 0.5);
+  border-radius: 30px;
+  height: auto;
+  width: auto;
+  margin: 0 10px;
+  position: relative;
+}
+.banner .slick-dots li button::before {
+  content: "";
+  height: auto;
+  width: auto;
+}
+.banner .slick-dots li.slick-active button {
+  opacity: 1;
+  background-color: #fff;
+}
+.banner .slick-dots li.slick-active button::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
 
 .services {
