@@ -496,6 +496,9 @@ figcaption a:hover {
   background-color: #fff;
   position: relative;
   height: 4px;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
 }
 .main-header .btn--hamburger > span::before {
   top: -10px;
@@ -505,6 +508,36 @@ figcaption a:hover {
 }
 .main-header .btn--hamburger:hover {
   background-color: #121419;
+}
+.main-header .btn--hamburger.hamburger--spin {
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+}
+.main-header .btn--hamburger.hamburger--spin > span {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.main-header .btn--hamburger.hamburger--spin > span::before {
+  transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+}
+.main-header .btn--hamburger.hamburger--spin > span:after {
+  transition: bottom 0.1s ease-in 0.25s, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.main-header .btn--hamburger.hamburger--spin.is-active > span {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.main-header .btn--hamburger.hamburger--spin.is-active > span::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+}
+.main-header .btn--hamburger.hamburger--spin.is-active > span::after {
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+  bottom: 4px;
 }
 
 .call-btn {

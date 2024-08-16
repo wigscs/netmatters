@@ -109,6 +109,9 @@
         background-color: #fff;
         position: relative;
         height: 4px;
+        transition-property: transform;
+        transition-duration: .15s;
+        transition-timing-function: ease;
       }
       &::before {
         top: -10px;
@@ -120,6 +123,39 @@
     }
     &:hover {
       background-color: $brand-dark;
+    }
+    &.hamburger--spin {
+      transition-property: opacity, filter;
+      transition-duration: .15s;
+      transition-timing-function: linear;
+      >span {
+        transition-duration: .22s;
+        transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+        &::before {
+          transition: top .1s ease-in .25s, opacity .1s ease-in;
+        }
+        &:after {
+          transition: bottom .1s ease-in .25s, transform .22s cubic-bezier(.55,.055,.675,.19);
+        }
+      }
+      &.is-active {
+        // background-color: $brand-dark;
+        >span {
+          transform: rotate(225deg);
+          transition-delay: .12s;
+          transition-timing-function: cubic-bezier(.215,.61,.355,1);
+          &::before {
+            top: 0;
+            opacity: 0;
+            transition: top .1s ease-out, opacity .1s ease-out .12s;
+          }
+          &::after {
+            transform: rotate(-90deg);
+            transition: bottom .1s ease-out, transform .22s cubic-bezier(.215,.61,.355,1) .12s;
+            bottom: 4px;
+          }
+        }
+      }
     }
   }
 }
@@ -164,4 +200,7 @@
   @media (min-width: $bp-sm) {
     display: none;
   }
+
+
 }
+

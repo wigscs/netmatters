@@ -1,14 +1,3 @@
-// Homepage banner carousel
-$(document).ready(function(){
-    $('.banner').slick({
-        adaptiveHeight: true,
-        arrows: false,
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 3500,
-    });
-});
-
 /** 
  * Cookie consent modal 
  */
@@ -27,4 +16,23 @@ acceptCookies.addEventListener('click', function(e) {
 
 manageCookies.addEventListener('click', function(e) {
     consentModal.style.display = consentModal.style.display === 'none' ? '' : 'none';
+});
+
+// Homepage banner carousel
+$(document).ready(function(){
+    $('.banner').slick({
+        adaptiveHeight: true,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3500,
+    });
+});
+
+/** 
+ * Hamburger side menu
+ */
+const hamburgerButton = document.querySelector('.hamburger--spin');
+hamburgerButton.addEventListener('click', function (e) {
+    hamburgerButton.classList.toggle('is-active');
 });
