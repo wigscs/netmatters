@@ -33,6 +33,16 @@ $(document).ready(function(){
  * Hamburger side menu
  */
 const hamburgerButton = document.querySelector('.hamburger--spin');
-hamburgerButton.addEventListener('click', function (e) {
+const body = document.getElementsByTagName('body')[0];
+function toggleSideMenu() {
     hamburgerButton.classList.toggle('is-active');
+    body.classList.toggle('menu-active');
+}
+hamburgerButton.addEventListener('click', function (e) {
+    toggleSideMenu();
+});
+body.addEventListener('click', function (e) {
+    if (e.target.id === 'container' && body.classList.contains('menu-active')) {
+        toggleSideMenu();
+    }
 });
