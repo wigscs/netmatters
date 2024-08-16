@@ -41,6 +41,7 @@ function toggleSideMenu() {
 hamburgerButton.addEventListener('click', function (e) {
     toggleSideMenu();
 });
+// listen for clicks on the main body to close the side menu
 body.addEventListener('click', function (e) {
     if (e.target.id === 'container' && body.classList.contains('menu-active')) {
         toggleSideMenu();
