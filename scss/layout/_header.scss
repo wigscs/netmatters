@@ -1,4 +1,5 @@
 .main-header {
+  background-color: #fff;
   padding-bottom: 20px;
   padding-top: 20px;
 
@@ -109,6 +110,9 @@
         background-color: #fff;
         position: relative;
         height: 4px;
+        transition-property: transform;
+        transition-duration: .15s;
+        transition-timing-function: ease;
       }
       &::before {
         top: -10px;
@@ -120,6 +124,39 @@
     }
     &:hover {
       background-color: $brand-dark;
+    }
+    &.hamburger--spin {
+      transition-property: opacity, filter;
+      transition-duration: .15s;
+      transition-timing-function: linear;
+      >span {
+        transition-duration: .22s;
+        transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+        &::before {
+          transition: top .1s ease-in .25s, opacity .1s ease-in;
+        }
+        &:after {
+          transition: bottom .1s ease-in .25s, transform .22s cubic-bezier(.55,.055,.675,.19);
+        }
+      }
+      &.is-active {
+        // background-color: $brand-dark;
+        >span {
+          transform: rotate(225deg);
+          transition-delay: .12s;
+          transition-timing-function: cubic-bezier(.215,.61,.355,1);
+          &::before {
+            top: 0;
+            opacity: 0;
+            transition: top .1s ease-out, opacity .1s ease-out .12s;
+          }
+          &::after {
+            transform: rotate(-90deg);
+            transition: bottom .1s ease-out, transform .22s cubic-bezier(.215,.61,.355,1) .12s;
+            bottom: 4px;
+          }
+        }
+      }
     }
   }
 }
@@ -164,4 +201,53 @@
   @media (min-width: $bp-sm) {
     display: none;
   }
+
+
+}
+
+.menu-active .sticky {
+  right: 275px;
+  @media (min-width: $bp-md) {
+    right: 350px;
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
+  animation-duration: .25s;
+  transition: all .5s;
+}
+
+@keyframes slideInDown {
+  0% {
+      transform: translate3d(0,-100%,0);
+      visibility: visible
+  }
+
+  to {
+      transform: translateZ(0)
+  }
+}
+
+.slideInDown {
+  animation-name: slideInDown
+}
+
+@keyframes slideOutUp {
+  0% {
+      transform: translateZ(0)
+  }
+
+  to {
+      visibility: hidden;
+      transform: translate3d(0,-100%,0)
+  }
+}
+
+.slideOutUp {
+  animation-name: slideOutUp
 }
