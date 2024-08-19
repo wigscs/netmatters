@@ -18,7 +18,9 @@ manageCookies.addEventListener('click', function(e) {
     consentModal.style.display = consentModal.style.display === 'none' ? '' : 'none';
 });
 
-// Homepage banner carousel
+/*
+ *  Homepage banner carousel
+ */
 $(document).ready(function(){
     $('.banner').slick({
         adaptiveHeight: true,
@@ -32,18 +34,56 @@ $(document).ready(function(){
 /** 
  * Hamburger side menu
  */
-const hamburgerButton = document.querySelector('.hamburger--spin');
-const body = document.getElementsByTagName('body')[0];
-function toggleSideMenu() {
-    hamburgerButton.classList.toggle('is-active');
-    body.classList.toggle('menu-active');
-}
-hamburgerButton.addEventListener('click', function (e) {
-    toggleSideMenu();
-});
+
 // listen for clicks on the main body to close the side menu
-body.addEventListener('click', function (e) {
-    if (e.target.id === 'container' && body.classList.contains('menu-active')) {
-        toggleSideMenu();
-    }
+$(document).on('click', '.hamburger--spin, .menu-active #container, .menu-active .sticky', function (e) {
+    $('.hamburger--spin').toggleClass('is-active');
+    $('body').toggleClass('menu-active');
 });
+
+/** 
+ * Sticky header 
+ */
+let windowPosition = 0;
+let headerHeight = $("#header").outerHeight();
+let scrollDown = 0;
+let scrollUp = 0;
+
+$(window).scroll(function() {
+    let scrollPosition = $(this).scrollTop();
+
+    if (scrollPosition == 0) {
+        $("#header").removeAttr("style");
+        setTimeout(function() {
+            $(".sticky").remove();
+        }, 250);
+    }
+    window.setTimeout(function() {
+        if (scrollPosition > windowPosition) { // scrolling down
+            if (scrollDown === 0) { 
+                // console.log('down', scrollPosition, headerHeight);
+                $(".sticky").addClass("slideOutUp");
+                $("#header").removeAttr("style");
+                setTimeout(function() {
+                    $(".sticky").remove();
+                }, 250);
+                scrollDown++;
+                scrollUp = 0;
+            }
+        } else { // scrolling up
+            if (scrollUp === 0 && scrollPosition > headerHeight) { 
+                // console.log('up', scrollPosition, headerHeight);
+
+                $("#header").css("visibility", "hidden");
+                $("body").append('<div class="sticky">' + $("#header").html() + "</div>");
+                $(".sticky").addClass("slideInDown");
+                scrollUp++;
+                scrollDown = 0;
+            }
+        }
+
+        windowPosition = scrollPosition;
+    }, 50)
+})
+
+

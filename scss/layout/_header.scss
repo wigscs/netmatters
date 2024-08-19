@@ -1,4 +1,5 @@
 .main-header {
+  background-color: #fff;
   padding-bottom: 20px;
   padding-top: 20px;
 
@@ -204,3 +205,49 @@
 
 }
 
+.menu-active .sticky {
+  right: 275px;
+  @media (min-width: $bp-md) {
+    right: 350px;
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
+  animation-duration: .25s;
+  transition: all .5s;
+}
+
+@keyframes slideInDown {
+  0% {
+      transform: translate3d(0,-100%,0);
+      visibility: visible
+  }
+
+  to {
+      transform: translateZ(0)
+  }
+}
+
+.slideInDown {
+  animation-name: slideInDown
+}
+
+@keyframes slideOutUp {
+  0% {
+      transform: translateZ(0)
+  }
+
+  to {
+      visibility: hidden;
+      transform: translate3d(0,-100%,0)
+  }
+}
+
+.slideOutUp {
+  animation-name: slideOutUp
+}

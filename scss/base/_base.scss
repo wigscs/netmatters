@@ -69,7 +69,8 @@ figcaption {
   }
 }
 
-.menu-active #container {
+.menu-active #container,
+.menu-active .sticky {
   cursor: pointer;
   left: -275px;
 
@@ -79,13 +80,13 @@ figcaption {
     opacity: 1;
     transition: opacity .5s;
   }
-  
+
   @media (min-width: $bp-md) {
     left: -350px;
   }
 }
 
-#container {
+#container, .sticky {
   overflow: hidden;
   background-color: #fff;
   position: relative;
