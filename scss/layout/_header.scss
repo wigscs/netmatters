@@ -220,6 +220,7 @@
   box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
   animation-duration: .25s;
   transition: all .5s;
+  overflow: visible;
 }
 
 @keyframes slideInDown {
