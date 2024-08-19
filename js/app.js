@@ -44,46 +44,55 @@ $(document).on('click', '.hamburger--spin, .menu-active #container, .menu-active
 /** 
  * Sticky header 
  */
-let windowPosition = 0;
+let debounce_timer;
+let lastScrollTop = 0;
 let headerHeight = $("#header").outerHeight();
+
 let scrollDown = 0;
 let scrollUp = 0;
 
-$(window).scroll(function() {
-    let scrollPosition = $(this).scrollTop();
+$(window).on('scroll', function() {
+    if (debounce_timer) {
+        window.clearTimeout(debounce_timer);
+	}
+	debounce_timer = window.setTimeout(function() {
+        let st = $(this).scrollTop();
 
-    if (scrollPosition == 0) {
-        $("#header").removeAttr("style");
-        setTimeout(function() {
-            $(".sticky").remove();
-        }, 250);
-    }
-    window.setTimeout(function() {
-        if (scrollPosition > windowPosition) { // scrolling down
-            if (scrollDown === 0) { 
-                // console.log('down', scrollPosition, headerHeight);
+        if (lastScrollTop) {
+            // if at the top of the page, remove the sticky header
+            if (st === 0) {
+                console.log('REMOVE 1');
+                $("#header").removeAttr("style");
+                setTimeout(function() {
+                    $(".sticky").remove();
+                }, 250);
+            }
+
+            if (scrollDown === 0 && st > lastScrollTop) { // scroll down
+                console.log('DOWN');
+
                 $(".sticky").addClass("slideOutUp");
                 $("#header").removeAttr("style");
                 setTimeout(function() {
                     $(".sticky").remove();
                 }, 250);
+
                 scrollDown++;
                 scrollUp = 0;
-            }
-        } else { // scrolling up
-            if (scrollUp === 0 && scrollPosition > headerHeight) { 
-                // console.log('up', scrollPosition, headerHeight);
+            } else if(scrollUp === 0 && st > headerHeight && st < lastScrollTop) { // scroll up
+                console.log('UP');
 
                 $("#header").css("visibility", "hidden");
                 $("body").append('<div class="sticky">' + $("#header").html() + "</div>");
                 $(".sticky").addClass("slideInDown");
+
                 scrollUp++;
                 scrollDown = 0;
             }
         }
+        lastScrollTop = st;
+	}, 50); 
+});
 
-        windowPosition = scrollPosition;
-    }, 50)
-})
 
 
