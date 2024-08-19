@@ -1624,6 +1624,11 @@ figcaption a:hover {
 .sidebar .main {
   padding: 21px;
 }
+@media (min-width: 992px) {
+  .sidebar .main {
+    display: none;
+  }
+}
 .sidebar .main > ul {
   margin: -20px 0 0;
 }
@@ -1677,6 +1682,16 @@ figcaption a:hover {
 .sidebar .bottom-menu {
   border-top: 1px solid rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+}
+@media (min-width: 992px) {
+  .sidebar .bottom-menu .hidden-md {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .sidebar .bottom-menu .hidden-sm {
+    display: none;
+  }
 }
 .sidebar .bottom-menu > li {
   border-top: 1px solid hsla(0, 0%, 100%, 0.1);
