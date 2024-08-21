@@ -1898,33 +1898,38 @@ figcaption a:hover {
   background-color: #9193a1;
 }
 
-.logo-list .slick-track {
+.logo-list {
   padding: 50px 0;
   display: flex;
-  overflow-x: clip;
+  overflow: visible;
   gap: 50px;
   align-items: center;
 }
-.logo-list .slick-track img {
+.logo-list img {
   max-height: 70px;
   padding: 0 20px;
   filter: grayscale(1);
 }
-.logo-list .slick-track img:hover {
+.logo-list img:hover {
   filter: initial;
 }
-.logo-list .slick-track .logo-container:hover img {
+.logo-list .logo-container:hover img {
   filter: initial;
+}
+.logo-list .slick-track {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 .logo-list--clients .slick-list {
   overflow: visible;
 }
-.logo-list--clients .slick-track img {
+.logo-list--clients img {
   padding: 0;
   max-width: 200px;
 }
-.logo-list--clients .slick-track .logo-container {
+.logo-list--clients .logo-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1932,10 +1937,10 @@ figcaption a:hover {
   position: relative;
   padding: 0 20px;
 }
-.logo-list--clients .slick-track .logo-container:hover .details {
+.logo-list--clients .logo-container:hover .details {
   display: block;
 }
-.logo-list--clients .slick-track .details {
+.logo-list--clients .details {
   display: none;
   position: absolute;
   bottom: 155%;
@@ -1946,36 +1951,36 @@ figcaption a:hover {
   text-align: center;
   min-width: 290px;
 }
-.logo-list--clients .slick-track .details a {
+.logo-list--clients .details a {
   font-weight: 600;
   font-size: 0.8125rem;
 }
-.logo-list--clients .slick-track .details h3, .logo-list--clients .slick-track .details a {
+.logo-list--clients .details h3, .logo-list--clients .details a {
   color: inherit;
   margin: 0;
 }
-.logo-list--clients .slick-track .details h3 {
+.logo-list--clients .details h3 {
   font-size: 1.125rem;
   padding-bottom: 17px;
   font-weight: 400;
   margin-bottom: 0;
 }
-.logo-list--clients .slick-track .details p {
+.logo-list--clients .details p {
   font-size: 0.8125rem;
   line-height: 1.375rem;
   margin: 0;
 }
-.logo-list--clients .slick-track .details .btn {
+.logo-list--clients .details .btn {
   margin-top: 11px;
   font-size: 16px;
 }
-.logo-list--clients .slick-track .arrow {
+.logo-list--clients .arrow {
   position: absolute;
   bottom: -38px;
   left: 50%;
   margin-left: -36px;
 }
-.logo-list--clients .slick-track .arrow::after {
+.logo-list--clients .arrow::after {
   content: "";
   margin: auto;
   display: inline-block;

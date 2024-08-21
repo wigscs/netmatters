@@ -39,7 +39,7 @@ $(document).ready(function(){
     });
     $('.logo-list--clients').slick({
         infinite: true,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2800,
         draggable: false,
         arrows: false,

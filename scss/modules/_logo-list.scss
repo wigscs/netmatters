@@ -1,7 +1,7 @@
-.logo-list .slick-track {
+.logo-list {
   padding: 50px 0;
   display: flex;
-  overflow-x: clip;
+  overflow: visible;
   gap: 50px;
   align-items: center;
   img {
@@ -15,80 +15,84 @@
   .logo-container:hover img {
     filter: initial;
   }
+  .slick-track {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
 }
 
 .logo-list--clients {
   .slick-list {
     overflow: visible;
   }
-  .slick-track {
-    img {
-      padding: 0;
-      max-width: 200px;
-    }
-    .logo-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 70px;
-      position: relative;
-      padding: 0 20px;
-  
-      &:hover {
-        .details {
-          display: block;
-        }
-      }
-    }
-    .details {
-      display: none;
-      position: absolute;
-      bottom: 155%;
-      max-width: 280px;
-      padding: 20px;
-      background-color: $brand-light;
-      color: #fff;
-      text-align: center;
-      min-width: 290px;
-      a {
-        font-weight: 600;
-        font-size: .8125rem;
-      }
-      h3, a {
-        color: inherit;
-        margin: 0;
-      }
-      h3 {
-        font-size: 1.125rem;
-        padding-bottom: 17px;
-        font-weight: 400;
-        margin-bottom: 0;
-      }
-      p {
-        font-size: .8125rem;
-        line-height: 1.375rem;
-        margin: 0;
-      }
-      .btn {
-        margin-top: 11px;
-        font-size: 16px;
-      }
+  img {
+    padding: 0;
+    max-width: 200px;
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    position: relative;
+    padding: 0 20px;
 
-    }
-    .arrow {
-      position: absolute;
-      bottom: -38px;
-      left: 50%;
-      margin-left: -36px;
-  
-      &::after {
-        content: "";
-        margin: auto;
-        display: inline-block;
-        border-color: $brand-light transparent transparent;
-        border-style: solid;
-        border-width: 35px 36px 0;
+    &:hover {
+      .details {
+        display: block;
       }
     }
   }
+  .details {
+    display: none;
+    position: absolute;
+    bottom: 155%;
+    max-width: 280px;
+    padding: 20px;
+    background-color: $brand-light;
+    color: #fff;
+    text-align: center;
+    min-width: 290px;
+    a {
+      font-weight: 600;
+      font-size: .8125rem;
+    }
+    h3, a {
+      color: inherit;
+      margin: 0;
+    }
+    h3 {
+      font-size: 1.125rem;
+      padding-bottom: 17px;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: .8125rem;
+      line-height: 1.375rem;
+      margin: 0;
+    }
+    .btn {
+      margin-top: 11px;
+      font-size: 16px;
+    }
+
+  }
+  .arrow {
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    margin-left: -36px;
+
+    &::after {
+      content: "";
+      margin: auto;
+      display: inline-block;
+      border-color: $brand-light transparent transparent;
+      border-style: solid;
+      border-width: 35px 36px 0;
+    }
+  }
+  
 }
