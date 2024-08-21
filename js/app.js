@@ -77,7 +77,6 @@ $(window).on('scroll', function() {
         if (lastScrollTop) {
             // if at the top of the page, remove the sticky header
             if (st === 0) {
-                console.log('REMOVE 1');
                 $("#header").removeAttr("style");
                 setTimeout(function() {
                     $(".sticky").remove();
@@ -85,8 +84,6 @@ $(window).on('scroll', function() {
             }
 
             if (scrollDown === 0 && st > lastScrollTop) { // scroll down
-                console.log('DOWN');
-
                 $(".sticky").addClass("slideOutUp");
                 $("#header").removeAttr("style");
                 setTimeout(function() {
@@ -96,7 +93,6 @@ $(window).on('scroll', function() {
                 scrollDown++;
                 scrollUp = 0;
             } else if(scrollUp === 0 && st > headerHeight && st < lastScrollTop) { // scroll up
-                console.log('UP');
 
                 $("#header").css("visibility", "hidden");
                 $("body").append('<div class="sticky">' + $("#header").html() + "</div>");
