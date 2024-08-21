@@ -21,7 +21,7 @@ manageCookies.addEventListener('click', function(e) {
 /*
  *  Homepage banner carousel
  */
-$(document).ready(function(){
+$(document).ready(function() {
     $('.banner').slick({
         adaptiveHeight: true,
         arrows: false,
