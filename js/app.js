@@ -29,6 +29,22 @@ $(document).ready(function(){
         autoplay: true,
         autoplaySpeed: 3500,
     });
+    $('.logo-list--accreditations').slick({
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2800,
+        draggable: false,
+        arrows: false,
+        variableWidth: true,
+    });
+    $('.logo-list--clients').slick({
+        infinite: true,
+        autoplay: false,
+        autoplaySpeed: 2800,
+        draggable: false,
+        arrows: false,
+        variableWidth: true,
+    });
 });
 
 /** 
