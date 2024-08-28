@@ -969,7 +969,7 @@ figcaption a:hover {
   position: relative;
   z-index: 2;
 }
-.banner h1 {
+.banner h1, .banner .h1 {
   font-size: 2.5rem;
   line-height: 3rem;
   margin: 0 0 1.25rem;
@@ -977,7 +977,7 @@ figcaption a:hover {
   color: inherit;
 }
 @media (min-width: 992px) {
-  .banner h1 {
+  .banner h1, .banner .h1 {
     font-size: 4rem;
     line-height: 5rem;
   }
