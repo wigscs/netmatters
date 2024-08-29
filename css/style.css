@@ -1304,7 +1304,7 @@ figcaption a:hover {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .home-main .btn {
     margin-bottom: 50px;
   }

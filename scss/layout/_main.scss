@@ -55,7 +55,7 @@
     }
   }
 
-  @media (max-width: $bp-md) {
+  @media (max-width: $bp-md - 1) {
     .btn {
       margin-bottom: 50px;
     }
