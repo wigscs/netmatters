@@ -456,7 +456,7 @@ figcaption a:hover {
   align-items: center;
   gap: 20px;
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .main-header__nav-container > .hidden-sm {
     display: none;
   }
@@ -499,7 +499,7 @@ figcaption a:hover {
   outline: 0;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .main-header .search-form {
     display: none;
   }
@@ -508,7 +508,7 @@ figcaption a:hover {
   outline: 0;
   width: 63px;
 }
-@media (max-width: 992px) or (min-width: 1260px) {
+@media (max-width: 991px) or (min-width: 1260px) {
   .main-header .search-form__search-btn {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;

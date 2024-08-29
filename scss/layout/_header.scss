@@ -32,7 +32,7 @@
     gap: 20px;
 
     > .hidden-sm {
-      @media (max-width: $bp-md) {
+      @media (max-width: $bp-md - 1) {
         display: none;
       }
       .fa-computer-mouse {
@@ -73,14 +73,14 @@
       }
     }
 
-    @media (max-width: $bp-sm) {
+    @media (max-width: $bp-sm - 1) {
       display: none;
     }
     &__search-btn {
       outline: 0;
       width: 63px;
 
-      @media (max-width: $bp-md) or (min-width: $bp-lg) {
+      @media (max-width: $bp-md - 1) or (min-width: $bp-lg) {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
