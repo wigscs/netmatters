@@ -108,6 +108,36 @@
     } 
   }
 
+
+  @mixin article-color($color) {
+    .img-container span, .btn {
+      background-color: $color;
+    }
+    .text h3 {
+      color: $color;
+    }
+  }
+  .security {
+    @include article-color($security);
+  }
+  .busdev {
+    @include article-color($busdev);
+  }
+  .it {
+    @include article-color($it);
+  }
+  .digital {
+    @include article-color($digital);
+  }
+  .telecoms {
+    @include article-color($telecoms);
+  }
+  .web {
+    @include article-color($web);
+  }
+  .developer {
+    @include article-color($developer);
+  }
   .software {
     .img-container span {
       background-color: $software;
@@ -117,24 +147,6 @@
     }
     .text h3 {
       color: $software;
-    }
-  }
-
-  .security {
-    .img-container span, .btn {
-      background-color: $security;
-    }
-    .text h3 {
-      color: $security;
-    }
-  }
-
-  .busdev {
-    .img-container span, .btn {
-      background-color: $busdev;
-    }
-    .text h3 {
-      color: $busdev;
     }
   }
 

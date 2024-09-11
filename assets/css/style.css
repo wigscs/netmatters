@@ -1435,15 +1435,6 @@ figcaption a:hover {
   padding-left: 20px;
   line-height: 1.375rem;
 }
-.articles .software .img-container span {
-  background-color: #67809F;
-}
-.articles .software .btn {
-  background-color: #f7b322;
-}
-.articles .software .text h3 {
-  color: #67809F;
-}
 .articles .security .img-container span, .articles .security .btn {
   background-color: #f62459;
 }
@@ -1455,6 +1446,45 @@ figcaption a:hover {
 }
 .articles .busdev .text h3 {
   color: #db8c0d;
+}
+.articles .it .img-container span, .articles .it .btn {
+  background-color: #4183D7;
+}
+.articles .it .text h3 {
+  color: #4183D7;
+}
+.articles .digital .img-container span, .articles .digital .btn {
+  background-color: #2ecc71;
+}
+.articles .digital .text h3 {
+  color: #2ecc71;
+}
+.articles .telecoms .img-container span, .articles .telecoms .btn {
+  background-color: #d64541;
+}
+.articles .telecoms .text h3 {
+  color: #d64541;
+}
+.articles .web .img-container span, .articles .web .btn {
+  background-color: #926fb1;
+}
+.articles .web .text h3 {
+  color: #926fb1;
+}
+.articles .developer .img-container span, .articles .developer .btn {
+  background-color: #ce4125;
+}
+.articles .developer .text h3 {
+  color: #ce4125;
+}
+.articles .software .img-container span {
+  background-color: #67809F;
+}
+.articles .software .btn {
+  background-color: #f7b322;
+}
+.articles .software .text h3 {
+  color: #67809F;
 }
 .articles .view-all, .articles .view-all-top {
   text-align: center;
