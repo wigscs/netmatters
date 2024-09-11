@@ -22,4 +22,3 @@ $dotenv->load();
 // Create DB connection
 $dsn = "mysql:host=".$_ENV['DB_HOST'].";port=".$_ENV['DB_PORT'].";dbname=".$_ENV['DB_DATABASE'].";user=".$_ENV['DB_USERNAME'].";password=".$_ENV['DB_PASSWORD'];
 $db = new Connection($dsn);
-
