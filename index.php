@@ -1,6 +1,4 @@
-<?php
-require __DIR__ . '/src/bootstrap.php';
-?>
+<?php require __DIR__ . '/src/bootstrap.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
