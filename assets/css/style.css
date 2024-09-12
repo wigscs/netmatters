@@ -330,6 +330,11 @@ a:hover {
   text-decoration: underline;
 }
 
+p {
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+}
+
 button {
   border: none;
 }
@@ -420,6 +425,10 @@ figcaption a:hover {
   content: "";
   opacity: 0;
   transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+
+.initiallyHidden {
+  display: none;
 }
 
 .main-header {
@@ -1489,6 +1498,16 @@ figcaption a:hover {
   font-size: 0.9em;
   padding: 5px 30px;
   border: 1px solid #926fb1;
+}
+
+.contact-info strong, .contact-info a {
+  font-weight: 600;
+  color: #333645;
+}
+.contact-info .text-web {
+  font-weight: 600;
+  color: #926fb1;
+  font-size: 1.625rem;
 }
 
 .articles {

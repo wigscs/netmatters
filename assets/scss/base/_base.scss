@@ -20,6 +20,11 @@ a {
   }
 }
 
+p {
+  line-height: 1.875rem;
+  margin-bottom: 25px;
+}
+
 button {
   border: none;
 }
@@ -108,3 +113,6 @@ figcaption {
   }
 }
 
+.initiallyHidden {
+  display: none;
+}

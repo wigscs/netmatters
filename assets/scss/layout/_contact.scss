@@ -86,3 +86,15 @@
         }
     }
 }
+
+.contact-info {
+    strong, a {
+        font-weight: 600;
+        color: $brand-light;
+    }
+    .text-web {
+        font-weight: 600;
+        color: $web;
+        font-size: 1.625rem;
+    }
+}

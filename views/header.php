@@ -3,11 +3,13 @@
         <div class="container">
             <div class="row">
                 <div class="main-header__logo">
-                    <img src="assets/img/f-logo.webp" alt="Netmatters&trade;">
+                    <a href="/">
+                        <img src="assets/img/f-logo.webp" alt="Netmatters&trade;">
+                    </a>
                 </div>
                 <div class="main-header__nav-container">
                     <a class="hidden-sm btn btn--it" href="#"><i class="fa-solid fa-computer-mouse"></i> Support</a>
-                    <a class="hidden-sm btn btn--default" href="#"><i class="fa-regular fa-paper-plane"></i> Contact</a>
+                    <a class="hidden-sm btn btn--default" href="/contact-us.php"><i class="fa-regular fa-paper-plane"></i> Contact</a>
                     <form class="search-form" action="index.html" method="get">
                         <input class="search-form__search-input" type="search" name="keyword" aria-label="Search" placeholder="Search...">
                         <button class="btn btn--default search-form__search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>

@@ -111,12 +111,39 @@
             </div>
         </section>
     
+        <section class="bottom container">
+            <div class="row">
+                <div class="contact-info">
+                    <div>
+                        <p><strong>Email us on:</strong><br></p>
+                        <p><a href="mailto:sales@netmatters.com" class="text-web">sales@netmatters.com</a></p>
+                        <p><strong>Business hours:</strong></p>
+                        <p><strong>Monday - Friday 07:00 - 18:00&nbsp;</strong></p>
+                    </div>
+                    <div>
+                        <p><a class="accordian" href="#">Out of Hours IT Support <i class="fa-solid fa-chevron-down"></i></a></p>
+                        <div class="panel initiallyHidden">
+                            <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+                            <p><strong>Monday - Friday 18:00 - 22:00
+                            </strong><strong>Saturday 08:00 - 16:00
+                            </strong><br><strong>Sunday 10:00 - 18:00</strong></p>
+                            <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours&nbsp; voicemail. A technician will contact you on the number provided within 45 minutes of your call.&nbsp;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+
+                </div>
+            </div>
+        </section>
+
         <?php include 'views/footer.php'; ?>
     </div>
 
     <?php include 'views/sidebar-menu.php'; ?>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="assets/js/slick/slick.min.js"></script>
     <script src="assets/js/app.js"></script>
 
 </body>

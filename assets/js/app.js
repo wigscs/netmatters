@@ -45,6 +45,17 @@ $(document).ready(function() {
         arrows: false,
         variableWidth: true,
     });
+    $('.accordian').on('click', function (e) {
+        e.preventDefault();
+        const panel = $(e.target).parent().next('.panel');
+        if (!panel.hasClass('active')) {
+            panel.slideDown();
+            panel.addClass('active');
+        } else {
+            panel.slideUp();
+            panel.removeClass('active');
+        }
+    });
 });
 
 /** 
