@@ -429,6 +429,7 @@ figcaption a:hover {
 
 .initiallyHidden {
   display: none;
+  overflow: hidden;
 }
 
 .main-header {
@@ -1500,6 +1501,9 @@ figcaption a:hover {
   border: 1px solid #926fb1;
 }
 
+.contact-info p {
+  margin-top: 0;
+}
 .contact-info strong, .contact-info a {
   font-weight: 600;
   color: #333645;
@@ -1508,6 +1512,9 @@ figcaption a:hover {
   font-weight: 600;
   color: #926fb1;
   font-size: 1.625rem;
+}
+.contact-info .out-of-hours {
+  margin-bottom: 25px;
 }
 
 .articles {

@@ -121,7 +121,7 @@
                         <p><strong>Monday - Friday 07:00 - 18:00&nbsp;</strong></p>
                     </div>
                     <div>
-                        <p><a class="accordian" href="#">Out of Hours IT Support <i class="fa-solid fa-chevron-down"></i></a></p>
+                        <p class="out-of-hours"><a class="accordian" href="#">Out of Hours IT Support <i class="fa-solid fa-chevron-down"></i></a></p>
                         <div class="panel initiallyHidden">
                             <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
                             <p><strong>Monday - Friday 18:00 - 22:00

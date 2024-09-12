@@ -88,6 +88,9 @@
 }
 
 .contact-info {
+    p {
+        margin-top: 0;
+    }
     strong, a {
         font-weight: 600;
         color: $brand-light;
@@ -96,5 +99,8 @@
         font-weight: 600;
         color: $web;
         font-size: 1.625rem;
+    }
+    .out-of-hours {
+        margin-bottom: 25px;
     }
 }
