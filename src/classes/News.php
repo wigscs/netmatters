@@ -1,5 +1,9 @@
 <?php
 
+namespace App;
+
+use PDO;
+
 class News extends Model
 {
     protected $table = 'news_posts';

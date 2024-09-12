@@ -252,7 +252,7 @@
             </div>
             <div class="article-list">
                 <?php
-                    $news = new News($db);
+                    $news = new App\News($db);
                     foreach ($news->getLatest() as $item) {
                         include 'views/latest-news.php';
                     }

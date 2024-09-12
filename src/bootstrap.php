@@ -1,19 +1,10 @@
 <?php
 
 // Autoload composer packages
-require realpath(__DIR__ . '/../vendor/autoload.php');
 
-// Autoload app classes
-function autoloader($class_name)
-{
-    foreach (glob(__DIR__ . DIRECTORY_SEPARATOR . '*') as $dir) {
-        if (file_exists($dir . DIRECTORY_SEPARATOR . $class_name . '.php')) {
-            require_once($dir . DIRECTORY_SEPARATOR . $class_name . '.php');
-            break;
-        }
-    }
-}
-spl_autoload_register('autoloader');
+use App\Connection;
+
+require realpath(__DIR__ . '/../vendor/autoload.php');
 
 // Load .env vars to $_ENV
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
