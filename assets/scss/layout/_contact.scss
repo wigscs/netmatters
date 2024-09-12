@@ -1,0 +1,88 @@
+.offices {
+    margin-bottom: 40px;
+    .office-address-row {
+        display: flex;
+        margin-left: -15px;
+        margin-right: -15px;
+        @media (max-width: ($bp-md - 1)) {
+            flex-direction: column;
+        }
+        > div {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            
+            @media (min-width: $bp-md) {
+                margin-top: 30px;
+                width: 33.33333333%;
+            }
+        }
+    }
+    .office-list {
+        margin-top: 20px;
+    }
+    .office-address {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        border-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+        @media (max-width: ($bp-md - 1)) {
+            margin-bottom: 30px;
+        }
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+        .content {
+            padding: 30px;
+            text-align: left;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            // line-height: 1.42857143;
+
+            h2 {
+                font-size: 1.25rem;
+                margin-top: 0;
+                margin-bottom: 15px;
+                font-weight: 400;
+                line-height: 1.1;
+                a {
+                    color: $brand-light;
+                }
+            }
+            address{
+                font-style: normal;
+            }
+            .address {
+                font-size: .8125rem;
+                line-height: 1.375rem;
+                font-weight: 400;
+                margin-bottom: 15px;
+            }
+            .phone {
+                margin-top: auto;
+                a {
+                    font-size: 1.625rem;
+                    font-weight: 700;
+                    color: $web;
+                }
+            }
+            .btn--web {
+                margin-top: 15px;
+                font-size: .9em;
+                padding: 5px 30px;
+                border: 1px solid $web;
+            }
+        }
+    }
+}

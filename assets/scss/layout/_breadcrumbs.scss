@@ -1,0 +1,31 @@
+.breadcrumb-container {
+    box-shadow: 0 5px 35px rgba(0, 0, 0, .1);
+    padding: 14px 0 13px;
+    line-height: 1.42857143;
+    @media (max-width: ($bp-sm - 1)) {
+        display: none;
+    }
+    @media (max-width: ($bp-md - 1)) {
+        border-top: 1px solid #333645;
+    }
+
+    .breadcrumbs {
+        color: $brand-light;
+        font-size: .8125rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-radius: 2px;
+        > li {
+            display: inline-block;
+            & + li::before {
+                content: "/\A0";
+                padding: 0 5px;
+            }
+        }
+        a {
+            color: $brand-light;
+            font-weight: 700;
+        }
+    }
+}

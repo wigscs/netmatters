@@ -1,5 +1,27 @@
 // Main Section
 
+.page-head {
+  padding-top: 50px;
+  padding-bottom: 0;
+  line-height: 1.42857143;
+  @media (max-width: ($bp-md - 1)) {
+    background-color: $brand-light;
+    margin-bottom: 50px;
+    padding: 24px 0;
+  }
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 400;
+    margin: 0 0 28px;
+    color: $brand-light;
+    line-height: 1.1;
+    @media (max-width: ($bp-md - 1)) {
+      color: #fff;
+      margin: 0;
+    }
+  }
+}
+
 .home-main {
   color: #fff;
   background-color: $brand-light;
