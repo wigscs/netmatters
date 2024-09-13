@@ -1553,16 +1553,14 @@ figcaption a:hover {
   color: #121419;
 }
 
-.form-error {
-  border: 1px solid #ebccd1;
-  background-color: #f2dede;
-  color: #a94442;
+.flash-message, .form-error, .form-success {
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 2px;
   line-height: 1.42857143;
+  border: 1px solid transparent;
 }
-.form-error .close {
+.flash-message .close, .form-error .close, .form-success .close {
   padding: 0;
   cursor: pointer;
   background: transparent;
@@ -1574,6 +1572,18 @@ figcaption a:hover {
   color: #000;
   text-shadow: 0 1px 0 #fff;
   opacity: 0.2;
+}
+
+.form-error {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+.form-success {
+  color: #fff;
+  background: #2ecc71;
+  border-color: #d6e9c6;
 }
 
 .form-group {

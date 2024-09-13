@@ -97,6 +97,9 @@ $(document).ready(function() {
             }
         })
     }
+    $('.alert-area .close').on('click', function (e) {
+        $(e.target).parent('.flash-message').remove();
+    });
 });
 
 /** 

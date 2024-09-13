@@ -134,7 +134,11 @@
                 <div class="contact-form">
                     <form method="post" action="/enquiry.php" id="contact-form">
                         <div class="alert-area">
-                            <div class="form-error">
+                            <div class="flash-message form-success">
+                                <button type="button" class="close">×</button>
+                                Your message has been sent!
+                            </div>
+                            <div class="flash-message form-error">
                                 <button type="button" class="close">&times;</button>
                                 The telephone format is incorrect.
                             </div>

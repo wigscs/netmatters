@@ -130,14 +130,12 @@
         }
     }
 }
-.form-error {
-    border: 1px solid #ebccd1;
-    background-color: #f2dede;
-    color: #a94442;
+.flash-message, .form-error, .form-success {
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 2px;
     line-height: 1.42857143;
+    border: 1px solid transparent;
 
     .close {
         padding: 0;
@@ -152,6 +150,16 @@
         text-shadow: 0 1px 0 #fff;
         opacity: .2;
     }
+}
+.form-error {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.form-success {
+    color: #fff;
+    background: #2ecc71;
+    border-color: #d6e9c6;
 }
 .form-group {
     margin-bottom: 15px;
