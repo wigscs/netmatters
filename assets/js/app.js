@@ -47,15 +47,56 @@ $(document).ready(function() {
     });
     $('.accordian').on('click', function (e) {
         e.preventDefault();
-        const panel = $(e.target).parent().next('.panel');
-        if (!panel.hasClass('active')) {
-            panel.slideDown();
-            panel.addClass('active');
-        } else {
-            panel.slideUp();
-            panel.removeClass('active');
-        }
+        $(e.target).parent().next('.panel').slideToggle();
     });
+    /* CONTACT FORM */
+    $('.pretty-checkbox').on('click', function (e) {
+        e.preventDefault();
+        $('.pretty-checkbox').toggleClass('active');
+        const cb = $('#marketing_preferences');
+        (cb.prop("checked") == true) ? cb.prop("checked", false) : cb.prop("checked", true);
+    });
+    $("#message").on("keypress", function() {
+        this.style.overflow = "hidden",
+        this.style.height = "1px",
+        this.style.height = 2 + this.scrollHeight + "px"
+    });
+    const contactForm = $("#contact-form");
+    if (contactForm.length) {
+        $.validator.methods.email = function( value, element ) {
+            return this.optional( element ) || /[a-z]+@[a-z]+\.[a-z]+/.test( value );
+        }
+        contactForm.validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                telephone: {
+                    required: true
+                },
+                subject: {
+                    required: true
+                },
+                message: {
+                    required: true
+                }
+            },
+            errorPlacement: function(error, element) {},
+            highlight: function(t) {
+                $(t).addClass("has-error");
+            },
+            unhighlight: function(t) {
+                $(t).removeClass("has-error");
+            },
+            submitHandler: form => {
+                form.submit();
+            }
+        })
+    }
 });
 
 /** 
