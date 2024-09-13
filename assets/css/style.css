@@ -314,6 +314,13 @@ template {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Material-Design-Icons;
+  src: url(/assets/fonts/Material-Design-Icons.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   font-family: Poppins, sans-serif;
   font-size: 1rem;
@@ -323,11 +330,16 @@ body {
 }
 
 a {
-  color: #666;
+  color: #333645;
   text-decoration: none;
 }
 a:hover {
+  color: #121419;
   text-decoration: underline;
+}
+
+small {
+  font-size: 85%;
 }
 
 p {
@@ -1517,6 +1529,201 @@ figcaption a:hover {
   margin-bottom: 25px;
 }
 
+.bottom {
+  padding-bottom: 50px;
+}
+
+#contact-form {
+  background-color: #e6e7e9;
+  border-radius: 10px;
+  padding: 30px;
+}
+#contact-form .recaptcha-terms {
+  color: #333645;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  margin-top: -10px;
+}
+#contact-form .recaptcha-terms a {
+  text-decoration: underline;
+  color: #333645;
+}
+#contact-form .recaptcha-terms a:hover {
+  color: #121419;
+}
+
+.form-error {
+  border: 1px solid #ebccd1;
+  background-color: #f2dede;
+  color: #a94442;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  line-height: 1.42857143;
+}
+.form-error .close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.2;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: 600;
+  color: #333645;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+label a {
+  color: #333645;
+  text-decoration: underline;
+}
+label.required::after, label .required:after {
+  content: " *";
+  color: #d24d57;
+}
+label.pretty-checkbox {
+  line-height: 32px;
+  cursor: pointer;
+}
+label.pretty-checkbox .button {
+  border-radius: 3px;
+  border: 3px solid #333645;
+  height: 32px;
+  width: 32px;
+  position: relative;
+  float: left;
+  margin-right: 20px;
+}
+label.pretty-checkbox .button span {
+  display: none;
+  line-height: 26px;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 50%;
+}
+label.pretty-checkbox .button [type=checkbox] {
+  display: none;
+}
+label.pretty-checkbox.active .button {
+  background-color: #333645;
+}
+label.pretty-checkbox.active .button span {
+  font-family: Material-Design-Icons;
+  color: #fff;
+  display: block;
+}
+label.pretty-checkbox.active .button span::before {
+  content: "\e623";
+}
+
+.media:first-child {
+  margin-top: 0;
+}
+
+.checkbox-left {
+  padding-right: 0;
+}
+
+.media-body, .media-left {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.form-control {
+  width: 100%;
+  height: 47px;
+  padding: 5px 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: block;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+}
+
+textarea#message {
+  min-height: 100px;
+  height: 100px;
+}
+
+.action-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.action-block .btn {
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+}
+.action-block .btn-primary {
+  background-color: #333645;
+  border: 1px solid #333645;
+}
+
+.helper-text {
+  color: #333645;
+}
+
+.text-danger {
+  color: #a94442;
+}
+
+@media (min-width: 992px) {
+  .contact-form .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .contact-form .row .form-group {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1260px) {
+  .bottom .row {
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .bottom .row .contact-info, .bottom .row .contact-form {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .bottom .row .contact-info {
+    position: relative;
+    left: 66.6666%;
+    width: 33.3333%;
+  }
+  .bottom .row .contact-form {
+    position: relative;
+    right: 33.3333%;
+    width: 66.6666%;
+  }
+}
 .articles {
   display: flex;
   flex-direction: column;

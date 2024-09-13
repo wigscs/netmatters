@@ -104,3 +104,203 @@
         margin-bottom: 25px;
     }
 }
+
+.bottom {
+    padding-bottom: 50px;
+}
+
+#contact-form {
+    background-color: #e6e7e9;
+    border-radius: 10px;
+    padding: 30px;
+
+    .recaptcha-terms {
+        color: #333645;
+        font-size: 11px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        margin-top: -10px;
+
+        a {
+            text-decoration: underline;
+            color: $brand-light;
+            &:hover {
+                color: #121419;
+            }
+        }
+    }
+}
+.form-error {
+    border: 1px solid #ebccd1;
+    background-color: #f2dede;
+    color: #a94442;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    line-height: 1.42857143;
+
+    .close {
+        padding: 0;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+        float: right;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 #fff;
+        opacity: .2;
+    }
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    font-weight: 600;
+    color: $brand-light;
+    display: inline-block;
+    margin-bottom: 5px;
+    a {
+        color: $brand-light;
+        text-decoration: underline;
+    }
+    &.required::after, .required:after {
+        content: " *";
+        color: #d24d57;
+    }
+    &.pretty-checkbox {
+        line-height: 32px;
+        cursor: pointer;
+        .button {
+            border-radius: 3px;
+            border: 3px solid #333645;
+            height: 32px;
+            width: 32px;
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            span {
+                display: none;
+                line-height: 26px;
+                text-align: center;
+                font-size: 22px;
+                border-radius: 50%;
+            }
+            [type=checkbox] {
+                display: none;
+            }
+        }
+        &.active {
+            .button {
+                background-color: $brand-light;
+                span {
+                    font-family: Material-Design-Icons;
+                    color: #fff;
+                    display: block;
+                    &::before {
+                        content: "\E623";
+                    }
+                }
+            }
+        }
+    }
+}
+.media:first-child {
+    margin-top: 0;
+}
+.checkbox-left {
+    padding-right: 0;
+}
+.media-body, .media-left {
+    display: table-cell;
+    vertical-align: top;
+}
+.form-control {
+    width: 100%;
+    height: 47px;
+    padding: 5px 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    display: block;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+}
+textarea#message {
+    min-height: 100px;
+    height: 100px;
+}
+.action-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    .btn {
+        height: auto;
+        line-height: 35px;
+        padding: 5px 15px;
+        text-transform: uppercase;
+        font-size: 1.063rem;
+        border-radius: 3px;
+        white-space: normal;
+    }
+
+    .btn-primary {
+        background-color: #333645;
+        border: 1px solid #333645;
+    }
+}
+.helper-text {
+    color: $brand-light;
+}
+.text-danger {
+    color: #a94442;
+}
+
+@media (min-width: $bp-md) {
+    .contact-form {
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px; 
+
+            .form-group {
+                width: 50%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+        }
+    }
+}
+
+@media (min-width: $bp-lg) {
+    .bottom {
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .contact-info, .contact-form {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .contact-info {
+                position: relative;
+                left: 66.6666%;
+                width: 33.3333%;
+            }
+            .contact-form {
+                position: relative;
+                right: 33.3333%;
+                width: 66.6666%;
+            }
+        }
+    }
+}

@@ -132,7 +132,61 @@
                     </div>
                 </div>
                 <div class="contact-form">
+                    <form method="post" action="/enquiry.php" id="contact-form">
+                        <div class="alert-area">
+                            <div class="form-error">
+                                <button type="button" class="close">&times;</button>
+                                The telephone format is incorrect.
+                            </div>
+                        </div>
 
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="name" class="required">Your Name</label>
+                                <input class="form-control" name="name" id="name" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input class="form-control" name="company" id="company" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="required">Your Email</label>
+                                <input class="form-control" name="email" id="email" type="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone" class="required">Your Telephone Number</label>
+                                <input class="form-control" name="telephone" id="telephone" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="required">Message</label>
+                            <textarea class="form-control" name="message" id="message" cols="50" rows="10">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="pretty-checkbox">
+                                <span class="media">
+                                    <span class="media-left checkbox-left">
+                                        <span class="button">
+                                            <span class="mdi-action-done"></span>
+                                            <input type="checkbox" name="marketing_preferences" id="marketing_preferences" value="1">
+                                        </span>
+                                    </span>
+                                    <span class="media-body">
+                                        Please tick this box if you wish to receive marketing information from us.
+                                        Please see our <a href="#" target="_blank">Privacy Policy</a> for more information on how we keep your data safe.
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group form-label recaptcha-terms">
+                            <span>This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer"><u>Privacy Policy</u></a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer"><u>Terms of Service</u></a> apply.</span>
+                        </div>
+                        <div class="action-block">
+                            <button class="btn btn-primary">Send Enquiry</button>
+
+                            <small class="helper-text"><span class="text-danger">*</span> Fields Required</small>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
