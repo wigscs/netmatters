@@ -10,7 +10,7 @@ class News extends Model
 
     public function getLatest($limit = 3)
     {
-        $res = $this->db->prepare("SELECT * FROM $this->table LIMIT ?");
+        $res = $this->db->prepare("SELECT * FROM $this->table ORDER BY publish_date DESC LIMIT ?");
         $res->bindValue(1, $limit, PDO::PARAM_INT);
         $res->execute();
      
