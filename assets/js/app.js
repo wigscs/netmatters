@@ -47,7 +47,8 @@ $(document).ready(function() {
     });
     $('.accordian').on('click', function (e) {
         e.preventDefault();
-        $(e.target).parent().next('.panel').slideToggle();
+        console.log('click');
+        $(e.target).parents('.out-of-hours').next('.panel').slideToggle();
     });
     /* CONTACT FORM */
     $('.pretty-checkbox').on('click', function (e) {
