@@ -1805,6 +1805,7 @@ textarea#message {
   margin-bottom: 25px;
 }
 .articles .text h3 {
+  min-height: 3rem;
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 600;
