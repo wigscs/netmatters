@@ -1,5 +1,16 @@
-<?php require __DIR__ . '/src/bootstrap.php'; ?>
-<!DOCTYPE html>
+<?php
+
+use App\ContactForm;
+use App\Enquiries;
+
+require __DIR__ . '/src/bootstrap.php';
+
+$form = null;
+if (!empty($_POST)) {
+    $form = new ContactForm($_POST);
+}
+
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -132,47 +143,69 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form method="post" action="/enquiry.php" id="contact-form">
+                    <form method="post" action="/contact-us.php#contact-form" id="contact-form">
                         <div class="alert-area">
-                            <div class="flash-message form-success">
-                                <button type="button" class="close">×</button>
-                                Your message has been sent!
-                            </div>
-                            <div class="flash-message form-error">
-                                <button type="button" class="close">&times;</button>
-                                The telephone format is incorrect.
-                            </div>
+                            <?php
+                            if ($form) {
+                                if ($form->validate()) {
+                                    // display success message
+                                    echo '<div class="flash-message form-success">'.PHP_EOL;
+                                    echo '    <button type="button" class="close">×</button>'.PHP_EOL;
+                                    echo 'Your message has been sent!'.PHP_EOL;
+                                    echo '</div>'.PHP_EOL;
+
+                                    // if form is valid add to database 
+                                    try {
+                                        $enquiry = new Enquiries($db);
+                                        $enquiry->createEnquiry($form->getInput());
+                                    } catch (PDOException $e) {
+                                        echo '<div class="flash-message form-error">'.PHP_EOL;
+                                        echo '    <button type="button" class="close">&times;</button>'.PHP_EOL;
+                                        echo 'Error adding enquiry to DB.'.PHP_EOL;
+                                        echo '</div>'.PHP_EOL;
+                                    }
+                                } else {
+                                    // display error messages
+                                    foreach ($form->getErrors() as $errorMsg) {
+                                        echo '<div class="flash-message form-error">'.PHP_EOL;
+                                        echo '    <button type="button" class="close">&times;</button>'.PHP_EOL;
+                                        echo $errorMsg.PHP_EOL;
+                                        echo '</div>'.PHP_EOL;
+                                    }
+                                }
+                            }
+                            ?>
                         </div>
 
                         <div class="row">
                             <div class="form-group">
                                 <label for="name" class="required">Your Name</label>
-                                <input class="form-control" name="name" id="name" type="text">
+                                <input class="form-control" name="name" id="name" type="text" value="<?php echo $form && $form->hasErrors() ? $form->getInput('name') : ''; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="company">Company Name</label>
-                                <input class="form-control" name="company" id="company" type="text">
+                                <input class="form-control" name="company" id="company" type="text" value="<?php echo $form && $form->hasErrors() ? $form->getInput('company') : ''; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="email" class="required">Your Email</label>
-                                <input class="form-control" name="email" id="email" type="email">
+                                <input class="form-control" name="email" id="email" type="email" value="<?php echo $form && $form->hasErrors() ? $form->getInput('email') : ''; ?>">
                             </div>
                             <div class="form-group">
-                                <label for="telephone" class="required">Your Telephone Number</label>
-                                <input class="form-control" name="telephone" id="telephone" type="text">
+                                <label for="phone" class="required">Your Telephone Number</label>
+                                <input class="form-control" name="phone" id="phone" type="text" value="<?php echo $form && $form->hasErrors() ? $form->getInput('phone') : ''; ?>">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="message" class="required">Message</label>
-                            <textarea class="form-control" name="message" id="message" cols="50" rows="10">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+                            <textarea class="form-control" name="message" id="message" cols="50" rows="10"><?php echo $form && $form->hasErrors() ? $form->getInput('message') : 'Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?'; ?></textarea>
                         </div>
                         <div class="form-group">
-                            <label class="pretty-checkbox">
+                            <label class="pretty-checkbox <?php echo $form && $form->hasErrors() && $form->getInput('marketing_preferences') ? ' active' : ''; ?>">
                                 <span class="media">
                                     <span class="media-left checkbox-left">
                                         <span class="button">
                                             <span class="mdi-action-done"></span>
-                                            <input type="checkbox" name="marketing_preferences" id="marketing_preferences" value="1">
+                                            <input type="checkbox" name="marketing_preferences" id="marketing_preferences" value="1" <?php echo $form && $form->hasErrors() && $form->getInput('marketing_preferences') ? ' checked' : ''; ?>>
                                         </span>
                                     </span>
                                     <span class="media-body">
