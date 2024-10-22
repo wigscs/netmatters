@@ -14,14 +14,14 @@ class Enquiries extends Model
             (name, company, email, phone, message, marketing_preferences)
             VALUES (:name, :company, :email, :phone, :message, :marketing_preferences)";
         $res = $this->db->prepare($sql);
+        
+        $res->bindValue(':name', $input['name'], PDO::PARAM_STR);
+        $res->bindValue(':company', $input['company'], PDO::PARAM_STR);
+        $res->bindValue(':email', $input['email'], PDO::PARAM_STR);
+        $res->bindValue(':phone', $input['phone'], PDO::PARAM_STR);
+        $res->bindValue(':message', $input['message'], PDO::PARAM_STR);
+        $res->bindValue(':marketing_preferences', $input['marketing_preferences'], PDO::PARAM_BOOL);
 
-        $res->execute([
-            ':name' => $input['name'],
-            ':company' => $input['company'],
-            ':email' => $input['email'],
-            ':phone' => $input['phone'],
-            ':message' => $input['message'],
-            ':marketing_preferences' => $input['marketing_preferences']
-        ]);
+        $res->execute();
     }
 }
