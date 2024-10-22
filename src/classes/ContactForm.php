@@ -40,12 +40,14 @@ class ContactForm
         }
         if (!$this->input['email']) {
             $this->addError('An email address is required.');
+        } else if (!preg_match('/^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/', $this->input['email'])) {
+            $this->addError('Invalid email address.');
         }
         if (!$this->input['phone']) {
             $this->addError('A telephone number is required.');
         }
         $phoneVal = str_replace(' ', '', $this->input['phone']);
-        if (!is_numeric($phoneVal) || strlen($phoneVal) != 11) {
+        if (!is_numeric($phoneVal) || strlen($phoneVal) != 11 || !preg_match('/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?#(\d{4}|\d{3}))?$/', $this->input['phone'])) {
             $this->addError('The telephone number format is incorrect.');
         }
         if (!$this->input['message']) {
