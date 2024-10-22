@@ -1,0 +1,38 @@
+// Main colors
+
+$brand-light    : #333645;
+$brand-dark     : darken($brand-light, 15%); // #121419
+
+$primary-light  : #272936;
+$primary-dark  : darken($primary-light, 10%); // #121318;
+
+$footer-light   : #323544;
+$footer-dark    : #212330;
+
+$btn-default      : #999aa2;
+$btn-hover        : darken($btn-default, 10%);
+
+$software-btn     : #f7b322;
+$software         : #67809F;
+$it               : #4183D7;
+$digital          : #2ecc71;
+$telecoms         : #d64541;
+$web              : #926fb1;
+$security         : #f62459;
+$developer        : #ce4125;
+$busdev           : #db8c0d;
+
+
+// Brand colors
+$google           : #4387f6;
+$trustpilot       : #00b67b;
+$facebook         : #3b5998;
+$linkedin         : #0077b5;
+$twitter          : #00aced;
+$instagram        : #d93175;
+
+
+// Breakpoints
+$bp-sm : 768px;
+$bp-md : 992px;
+$bp-lg : 1260px;

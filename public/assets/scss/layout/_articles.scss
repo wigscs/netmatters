@@ -1,0 +1,195 @@
+// Articles
+.articles {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    color: $brand-light;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+  .img-container img {
+    width: 100%;
+  }
+  .block {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 30px;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, .1);
+  }
+  .item {
+    font-size: .8125rem;
+    margin-top: 30px;
+    position: relative;
+    top: 0;
+    transition: .5s ease;
+    &:hover {
+      top: -10px;
+      transition: .5s ease;
+    }
+  }
+  .img-container {
+    position: relative;
+    bottom: -4px;
+    span {
+      display: block;
+      position: absolute;
+      right: 0; 
+      top: 10px;
+      color: #fff;
+      padding: 0 10px;
+      font-size: .75rem;
+      line-height: 1.438rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+
+  .text {
+    p {
+      line-height: 1.375rem;
+      font-size: .8125rem;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+    h3 {
+      min-height: 3rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 600;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .read-time {
+      font-weight: 400;
+      text-transform: uppercase;
+      color: rgba(51, 54, 69, .5);
+      font-size: .85rem;
+    }
+  }
+
+  .footer {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #ccc;
+    display: table;
+    width: 100%;
+    font-size: .875rem;
+
+    .avatar, .details {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .avatar {
+      border-radius: 50%;
+      width: 1%;
+      overflow: hidden;
+    }
+
+    img {
+      max-width: 47px;
+    }
+
+    time {
+      color: #666;
+    }
+
+    .details {
+      padding-left: 20px;
+      line-height: 1.375rem;
+    } 
+  }
+
+
+  @mixin article-color($color) {
+    .img-container span, .btn {
+      background-color: $color;
+    }
+    .text h3 {
+      color: $color;
+    }
+  }
+  .security {
+    @include article-color($security);
+  }
+  .busdev {
+    @include article-color($busdev);
+  }
+  .it {
+    @include article-color($it);
+  }
+  .digital {
+    @include article-color($digital);
+  }
+  .telecoms {
+    @include article-color($telecoms);
+  }
+  .web {
+    @include article-color($web);
+  }
+  .developer {
+    @include article-color($developer);
+  }
+  .software {
+    .img-container span {
+      background-color: $software;
+    }
+    .btn {
+      background-color: $software-btn;
+    }
+    .text h3 {
+      color: $software;
+    }
+  }
+
+  .view-all {
+    text-align: center;
+    color: $brand-light;
+    font-weight: 600;
+    font-size: 1.625rem;
+    margin-top: 50px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .view-all-top {
+    @extend .view-all;
+    float: right;
+    display: none;
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
+  }
+  @media (min-width: 768px) {
+    .article-list {
+      margin-left: -15px;
+      margin-right: -15px;
+      display: flex;
+      > article {
+        width: 50%;
+        padding: 0 15px;
+      }
+    }
+    .article-list > :last-child {
+      display: none;
+    }
+    .view-all-bottom {
+      display: none;
+    }
+  }
+  @media (min-width: 1260px) {
+    .article-list > :last-child {
+      display: initial;
+    }
+  }
+
+}
