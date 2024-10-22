@@ -1,6 +1,6 @@
 # Set up
-1. Use netmatters.sql to create DB tables
-2. Copy .env.example to .env and change DB connection details
+1. Use [netmatters.sql](netmatters.sql) to create DB tables
+2. Copy [.env.example](.env.example) to .env and change DB connection details
 
 ```env
 DB_HOST=127.0.0.1
