@@ -75,7 +75,7 @@ $(document).ready(function() {
                     required: true,
                     email: true
                 },
-                telephone: {
+                phone: {
                     required: true
                 },
                 subject: {
